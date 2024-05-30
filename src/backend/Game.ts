@@ -2,9 +2,7 @@ import { useStore } from '@/context'
 import Player from './classes/Player'
 import Projectile from './classes/Projectile'
 import { socket } from '@/socket'
-import type { Players, Projectiles, PlayerInput } from '@/types'
-import type { BackEndPlayer, BackEndProjectile } from '@/types'
-
+import type { BackEndPlayer, BackEndProjectile, Players, Projectiles, PlayerInput } from '@/types'
 
 class Game {
   private canvas: HTMLCanvasElement
@@ -217,4 +215,8 @@ class Game {
   }
 }
 
-export default Game
+function StartGame(canvas: HTMLCanvasElement): Game {
+  return new Game(canvas)
+}
+
+export default StartGame

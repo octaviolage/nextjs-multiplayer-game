@@ -37,8 +37,7 @@ export default function Home() {
 
   useEffect(() => {
     if (canvasRef.current) {
-      const { devicePixelRatio } = window;
-      new StartGame(canvasRef.current, devicePixelRatio);
+      StartGame(canvasRef.current);
     }
   }, []);
 
